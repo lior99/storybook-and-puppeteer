@@ -1,3 +1,5 @@
+import './title/Title.js';
+
 class Counter extends HTMLElement {
   constructor() {
     super();
@@ -16,6 +18,7 @@ class Counter extends HTMLElement {
     const template = document.createElement('template');
 
     template.innerHTML = `<div>
+        <div><title-component /></div>
         <button id='incrementButton'>counter</button>
         <div id='counter'>Times clicked: ${counter}</div>
     </div>`;
@@ -25,9 +28,7 @@ class Counter extends HTMLElement {
 
   registerEvents(counter) {
     this.shadowRoot.addEventListener('click', function (event) {
-      const counterDiv = document
-        .querySelector('my-counter-comp')
-        .shadowRoot.querySelector('#counter');
+      const counterDiv = document.querySelector('my-counter-comp').shadowRoot.querySelector('#counter');
 
       counter++;
 

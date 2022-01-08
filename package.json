@@ -19,6 +19,7 @@
     "babel-loader": "^8.2.3"
   },
   "dependencies": {
-    "@storybook/html": "^6.4.9"
+    "@storybook/html": "^6.4.9",
+    "puppeteer": "^13.0.1"
   }
 }
